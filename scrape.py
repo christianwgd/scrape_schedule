@@ -7,6 +7,7 @@ import csv
 webdriver_service = Service('./geckodriver')
 
 # URL of the website
+# EHV-NRW Regionalliga Schedule
 url = 'https://ehv-nrw.de/leagues/league/sen/rlw/81/'  # Replace this with the URL of the website you want to scrape
 
 # Configure Firefox options
