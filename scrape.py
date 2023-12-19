@@ -6,9 +6,11 @@ import csv
 # Path to your GeckoDriver executable
 webdriver_service = Service('./geckodriver')
 
+league = 'sen/rlw/81'
+
 # URL of the website
 # EHV-NRW Regionalliga Schedule
-url = 'https://ehv-nrw.de/leagues/league/sen/rlw/81/'  # Replace this with the URL of the website you want to scrape
+url = f'https://ehv-nrw.de/leagues/league/{league}/'  # Replace this with the URL of the website you want to scrape
 
 # Configure Firefox options
 options = webdriver.FirefoxOptions()
@@ -32,7 +34,8 @@ try:
 
     if rows:
         # Create and open a CSV file in write mode
-        with open('table_data.csv', mode='w', newline='', encoding='utf-8') as csv_file:
+        file_name = league.replace('/', '_') + '.csv'
+        with open(file_name, mode='w', newline='', encoding='utf-8') as csv_file:
             csv_writer = csv.writer(csv_file)
 
             # Write the content of each row to the CSV file
