@@ -23,7 +23,7 @@ driver = webdriver.Firefox(service=webdriver_service, options=options)
 driver.get(url)
 
 # Wait for the table to be loaded (you may need to adjust the waiting time)
-driver.implicitly_wait(3)  # Waits for 10 seconds
+driver.implicitly_wait(3)  # Waits for n seconds
 
 try:
     # Find the table rows
